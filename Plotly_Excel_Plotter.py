@@ -23,7 +23,7 @@ import os
 # Create a file selection dialogue box
 layout = [
     [sg.Text("Select file:"), sg.Input(key="-FILE-"), sg.FileBrowse(file_types=(("Excel Files", "*.xlsx"),("Excel Files", "*.xls"), ("CSV Files", "*.csv")))],
-    [sg.Text("Sheet Number / CSV File:"), sg.Input(key="-SHEET-NUM-")],
+    [sg.Text("Sheet Number / CSV File:"), sg.Input(key="-SHEET-NUM-", default_text = "1")],
     [sg.Text("Select Plot Type:"), sg.Combo(["Line Plot", "Scatter Plot", "Bar Plot", "Histogram", "Box Plot", "Pie Chart", "Heatmap", "3D Plot", "Violin Plot", "Area Plot"], key="-PLOT-TYPE-", default_value="Line Plot")],
     [sg.Text("Plot Title:"), sg.Input(key="-PLOT-TITLE-")],
     [sg.Button("Select Columns"), sg.Button("Plot"), sg.Button("Exit")]
